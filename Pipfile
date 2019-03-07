@@ -8,6 +8,7 @@ flask = "*"
 slackclient = "*"
 html-slacker = "*"
 "html2text" = "*"
+"bs4" = "*"
 
 [dev-packages]
 "pep8" = "*"
