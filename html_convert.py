@@ -46,7 +46,7 @@ class HTMLSlacker(HTMLParser):
         if tag == "i" or tag == "em":
             self.output += "_"
         if tag == "code":
-            self.output += "`"
+            self.output += "```"
         if tag == "li":
             self.output += LINEBR + " • "
         if tag == "a":
@@ -57,7 +57,7 @@ class HTMLSlacker(HTMLParser):
                 #     self.output += value
                 if name[0] == "href":
                     #     print(attr[0] + " is attr")
-                    self.output += name[1] + "| "
+                    self.output += name[1] + "|"
         if tag == "strike":
             self.output += "~"
         if tag == "style" or tag == "script":
@@ -75,10 +75,10 @@ class HTMLSlacker(HTMLParser):
             self.output += "_"
         if tag == "a":
             self.output += ">"
-        if tag == "li":
-            self.output += LINEBR
+        # if tag == "li":
+        #     self.output += LINEBR
         if tag == "code":
-            self.output += "`"
+            self.output += "```"
         if tag == "strike":
             self.output += "~"
         if tag == "style" or tag == "script":

@@ -79,7 +79,7 @@ def events():
         sc.api_call(
             "chat.update",
             channel=event["event"]["item"]["channel"],
-            text=HTMLSlacker(out1).get_output().replace("| >", "|"),
+            text=HTMLSlacker(out1).get_output().replace("| >", "|").replace("?>", "?"),
             # text=out1,
             ts=event["event"]["item"]["ts"],
             as_user="true",
